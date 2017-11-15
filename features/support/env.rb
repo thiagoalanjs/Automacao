@@ -7,11 +7,11 @@ require 'capybara/dsl'
 require 'site_prism'
 require 'capybara-screenshot/cucumber'
 require 'rspec/expectations'
+require 'capybara/rspec'
+require 'capybara/poltergeist'
 
 include Capybara::DSL
-
-Capybara.register_driver :selenium do |app|
-	
+Capybara.register_driver :selenium do |app|	
 Capybara::Selenium::Driver.new(app, :browser => :chrome)
 
 end
